@@ -1,5 +1,5 @@
 # NoStamina-SKSE
-based on: https://github.com/malus741/NoStaminaConsumptionOutsideCombat  slightly changed + updated for GOG
+based on: https://github.com/malus741/NoStaminaConsumptionOutsideCombat  slightly changed + updated for GOG and VR
 
 the changes are only subtle but it helped me a ton to understand how to get started with SKSE plugins
 
