@@ -12,3 +12,5 @@ CTestTestfile.cmake
 /build
 /vcpkg_installed
 /.vs
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
