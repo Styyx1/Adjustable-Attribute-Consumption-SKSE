@@ -2,7 +2,7 @@
 
 bool Settings::LoadSettings()
 {
-	constexpr auto path = L"Data/SKSE/Plugins/AdjustableAttributesOutOfCombat.ini";
+	constexpr auto path = L"Data/SKSE/Plugins/AdjustableAttributes.ini";
 
 	CSimpleIniA ini;
 	ini.SetUnicode();

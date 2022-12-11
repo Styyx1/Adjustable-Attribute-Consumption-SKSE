@@ -26,7 +26,7 @@ namespace Hooks
 	};
 	static inline void Install() 
 	{
-		Settings::GetSingleton()->LoadSettings();
+		
 
 		REL::Relocation<std::uintptr_t> hook_addr{ RELOCATION_ID(37522, 38467), REL::Offset(0x14) };
 		stl::write_thunk_call<ModActorValueHook>(hook_addr.address());

@@ -10,7 +10,7 @@ void MessageHandler(SKSE::MessagingInterface::Message* a_msg)
 		break;
 	case SKSE::MessagingInterface::kDataLoaded:  // All ESM/ESL/ESP plugins have loaded, main menu is now active.
 		// It is now safe to access form data.
-		
+		Settings::GetSingleton()->LoadSettings();
 		break;
 
 		// Skyrim game events.
