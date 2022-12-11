@@ -12,6 +12,7 @@
 
 #include <ShlObj_core.h>
 #include <Windows.h>
+
 #ifdef NDEBUG
 #	include <spdlog/sinks/basic_file_sink.h>
 #else

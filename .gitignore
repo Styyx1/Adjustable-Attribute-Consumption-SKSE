@@ -11,3 +11,4 @@ CTestTestfile.cmake
 *.bat
 /build
 /vcpkg_installed
+/.vs
