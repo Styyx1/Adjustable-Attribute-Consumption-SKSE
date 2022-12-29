@@ -12,13 +12,13 @@ namespace Hooks
 				const auto playerCharacter = RE::PlayerCharacter::GetSingleton();
 				const auto settings = Settings::GetSingleton();
 					if ((actor == Utils::GetPlayerMount(playerCharacter)) && settings->UseHorse() == true && RE::ACTOR_VALUE_MODIFIER::kDamage == avModifier && RE::ActorValue::kStamina == actorValue && !playerCharacter->IsInCombat() && value < 0.0f) {
-					value = 0.0f;
+					value = value * settings->GetHorseDrain();
 					}
 					if ((actor == playerCharacter) && RE::ACTOR_VALUE_MODIFIER::kDamage == avModifier && settings->UseMagicka() == true && RE::ActorValue::kMagicka == actorValue && !playerCharacter->IsInCombat() && value < 0.0f) {
-					value = 0.0f;
+					value = value * settings->GetMagickaDrain();
 					}
 					if ((actor == playerCharacter) && RE::ACTOR_VALUE_MODIFIER::kDamage == avModifier && settings->UseStamina() == true && RE::ActorValue::kStamina == actorValue && !playerCharacter->IsInCombat() && value < 0.0f) {
-					value = 0.0f;
+					value = value * settings->GetStaminaDrain();
 			}
 			func(actor, avModifier, actorValue, value);
 		}
@@ -26,8 +26,6 @@ namespace Hooks
 	};
 	static inline void Install() 
 	{
-		
-
 		REL::Relocation<std::uintptr_t> hook_addr{ RELOCATION_ID(37522, 38467), REL::Offset(0x14) };
 		stl::write_thunk_call<ModActorValueHook>(hook_addr.address());
 	}
