@@ -13,7 +13,7 @@ the changes are only subtle but it helped me a ton to understand how to get star
 
 ## Building
 ```
-git clone https://github.com/chri3i/Adjustable-Attribute-Consumption-SKSE
+git clone https://github.com/Styyx1/Adjustable-Attribute-Consumption-SKSE
 cd Adjustable-Attribute-Consumption-SKSE
 cmake --preset adjustableattributes
 ```
